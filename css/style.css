@@ -7,6 +7,7 @@
    RESET & BASE
 ============================================ */
 
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -1859,3 +1860,31 @@ button, input, textarea, select {
   }
 }
 
+/* ==========================================================================
+   AJUSTE CIRÚRGICO DO LOGO (PRESERVA TODO O COMPORTAMENTO DA NAVBAR)
+   ========================================================================== */
+
+/* Ajuste no Desktop: Controla apenas a imagem dentro do link do logo */
+.header .nav-container a.logo img, 
+img[src*="icone"] {
+  height: 48px !important;       /* Altura ideal para o logo aparecer bem */
+  max-height: 48px !important;
+  width: auto !important;         /* Mantém a proporção sem distorcer */
+  display: block !important;
+}
+
+/* Garante que o link em volta da imagem não empurre a navbar para baixo */
+.header .nav-container a.logo {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* Ajuste no Mobile: Diminui apenas o logo, sem mexer no contêiner ou no menu */
+@media (max-width: 768px) {
+  .header .nav-container a.logo img, 
+  img[src*="icone"] {
+    height: 36px !important;     /* Tamanho perfeito para telas de celular */
+    max-height: 36px !important;
+  }
+}

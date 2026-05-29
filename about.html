@@ -9,30 +9,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="icon" type="image/x-icon" href="img/fav.ico">
 </head>
 <body>
+<header class="header" id="header">
+  <div class="container nav-container">
 
-  <header class="header" id="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-         
-        </svg>
-        NyxCloud
+     <a href="index.html" class="logo">
+        <img src="img/icone.png" alt="imglogo"> NyxCloud
       </a>
 
-      <nav class="nav" id="nav" aria-label="Navegação principal">
-        <a href="index.html#solutions">Soluções</a>
-        <a href="index.html#features">Recursos</a>
-        <a href="#" class="active">Sobre nós</a>
-        <a href="index.html#contact">Contato</a>
-      </nav>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="index.html#solutions">Soluções</a>
+      <a href="index.html#features">Recursos</a>
+      <a href="index.html#pricing">Planos</a>
+      <a href="about.html" class="nav-active">Sobre</a>
+      <a href="index.html#contact">Contato</a>
+    </nav>
 
-     
+    <div class="nav-actions">
+      <a href="index.html#contact" class="btn btn-primary btn-sm">Começar agora</a>
+      <a href="back/index.php" class="btn btn-primary">Login</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </header>
+
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html#solutions">Soluções</a>
+    <a href="index.html#features">Recursos</a>
+    <a href="index.html#pricing">Planos</a>
+    <a href="about.html" class="nav-active">Sobre</a>
+    <a href="index.html#contact">Contato</a>
+    <a href="index.html#contact" class="btn btn-primary">Começar agora</a>
+    <a href="back/index.php" class="btn btn-primary">Login</a>
+  </div>
+</header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav class="mobile-nav">
@@ -136,8 +154,10 @@
         </div>
 
         <div class="team-photo">
-          <div class="photo-placeholder">FOTO DA EQUIPE</div>
+          <img src="img/foto_nos.jpeg" alt="Foto da Equipe">
         </div>
+
+
 
         <div class="team-grid">
           <div class="member-card">
@@ -203,7 +223,7 @@
           <div class="member-card">
             <div class="member-header">
               <div>
-                <h3>Maria Laura Rosa</h3>
+                <h3>Maria Laura Pereira</h3>
                 <span>Banco de Dados</span>
               </div>
               <button class="toggle-btn" aria-label="Expandir informações">
@@ -237,7 +257,6 @@
       <div class="footer-brand">
         <a href="index.html" class="logo logo-footer">
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M10 2L3 6V10C3 14.4 6.1 18.5 10 19C13.9 18.5 17 14.4 17 10V6L10 2Z" fill="currentColor"/>
           </svg>
           NyxCloud
         </a>
